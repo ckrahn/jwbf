@@ -382,7 +382,6 @@ public class HttpActionClient {
         if (userAgentParts.isEmpty()) {
           withUserAgent("Unknown", "Unknown");
         }
-        withUserAgent("JWBF", trimAndReplaceWhitespace(getJwbfVersion()));
         HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
         httpClientBuilder.setUserAgent(makeUserAgentString(userAgentParts));
         withClient(httpClientBuilder.build());
